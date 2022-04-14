@@ -1,0 +1,21 @@
+p {
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+html {
+    color: white;
+    background-color: darkslategray;
+    font-family: 'Cormorant Infant', serif;
+    text-align: center;
+}
+input, h2 {
+    margin: 1em;
+}
+
+section {
+    width: 85vw;
+}
