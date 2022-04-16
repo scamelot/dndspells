@@ -16,13 +16,37 @@ class Spell {
     }
 }
 
+class PlayerClass {
+    constructor(data) {
+        this.name = data.name
+        this.url = data.url
+        //fetch the url and get equipment, proficiencies and more!
+    }
+}
+
+let classes = []
 let spells = []
 const $ = document.querySelector.bind(document)
 $('#submit').addEventListener('click',getSpells)
 
+//get list of classes
+fetch(`${apiROOT}/api/classes`)
+.then(response => response.json())
+.then(data => {
+    if (data) {
+        data.results.forEach(playerClass => {
+            classes.push(new PlayerClass(playerClass))
+        })
+    }
+    classes.forEach(pc => {
+        $('#class-select').innerHTML += `<option value=${pc.name}>${pc.name}</option>`
+    })
+})
+
+
 function getSpells() {
 
-    let search = $('#search').value.toLowerCase()
+    let search = $('#class-select').value.toLowerCase()
 
     fetch(`${apiROOT}/api/classes/${search}/spells`)
     .then(response => response.json())
