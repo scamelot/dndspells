@@ -16,6 +16,6 @@ input, h2 {
     margin: 1em;
 }
 
-section {
-    width: 85vw;
+.spell:hover {
+    color: yellow;
 }
