@@ -19,7 +19,7 @@ class Spell {
             // console.log(data)
             this.desc = data.desc.join('\n')
             localStorage.setItem(`${this.title}`, JSON.stringify(data))
-            $('#spells').innerHTML += `<h3 class="spell">${this.title}</h3><p id="${this.id}">${this.desc}</p>`
+            $('#spells').innerHTML += `<h3 class="spell my-5">${this.title}</h3><p id="${this.id}">${this.desc}</p>`
         })
     }
     console.log(this.desc)

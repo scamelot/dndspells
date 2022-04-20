@@ -27,3 +27,7 @@ section {
 .spell:hover {
     color: yellow;
 }
+
+.hidden {
+    display: none;
+}
