@@ -1,0 +1,22 @@
+{
+  "name": "dndspells",
+  "version": "1.0.0",
+  "description": "D&D Spells per Class!",
+  "main": "spells.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scamelot/dndspells.git"
+  },
+  "author": "Steve Scammon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scamelot/dndspells/issues"
+  },
+  "homepage": "https://github.com/scamelot/dndspells#readme",
+  "dependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

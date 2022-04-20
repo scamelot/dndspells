@@ -1,21 +1,28 @@
 apiROOT = `https://www.dnd5eapi.co`
+localStorage.clear()
 
 class Spell {
     constructor(data) {
         this.title = data.name
         this.id = data.name.split(' ').join('')
         this.url = data.url
+        this.level = data.level
+        this.range = data.range
+        this.school = data.school
         this.desc = ''
     }
     updateView() {
+        if (!localStorage[`${this.title}`]) {
         fetch(`${apiROOT}${this.url}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             this.desc = data.desc.join('\n')
+            localStorage.setItem(`${this.title}`, JSON.stringify(data))
             $('#spells').innerHTML += `<h3 class="spell">${this.title}</h3><p id="${this.id}">${this.desc}</p>`
         })
-        
+    }
+    console.log(this.desc)
     }
 }
 

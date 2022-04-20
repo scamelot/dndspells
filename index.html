@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='output.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;700&display=swap" rel="stylesheet">
     <title>D&D Spells</title>
 </head>
-<body>
-    <h2>Search for a class</h2>
-    <select name="classes" id="class-select">
+<body class="grid place-items-center">
+    <h2 class="text-3xl font-bold">Choose your class</h2>
+    <select class='form-select appearance-none
+    block
+    px-3
+    py-3
+    mb-20
+    text-base
+    text-center
+    font-bold
+    text-gray-700
+    bg-black bg-clip-padding bg-no-repeat
+    border border-solid border-gray-300
+    rounded
+    transition
+    
+    ease-in-out
+    m-0
+    focus: text-gray-700 focus:bg-green focus:border-blue-600 focus:outline-none
+    
+    '
+    name="classes" id="class-select">
         <option value="">--Choose a Class--</option>
     </select>
     <!-- <input type='text' id='search'> -->
-    <button id='submit'>submit</button>
+    <!-- <button id='submit'>submit</button> -->
     <section id='spells'>
     <h3></h3>
     <p></p>
